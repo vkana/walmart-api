@@ -99,6 +99,11 @@ module.exports = function(key, options) {
           }
         }
         return _get({}, url);
+      },
+      searchByUPC: function(store, upcCode) {
+        https://search.mobile.walmart.com/v1/products-by-code/UPC/190198508218?storeId=2954
+        var url = "http://search.mobile.walmart.com/v1/products-by-code/UPC/" + upcCode + "?storeId=" + store;
+        return _get({}, url);
       }
     }
   }
